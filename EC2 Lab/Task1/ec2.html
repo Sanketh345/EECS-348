@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p {
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function verifyPasswords() {
+            const password1 = document.getElementById("password1").value;
+            const password2 = document.getElementById("password2").value;
+
+            if (password1.length < 8 || password1 !== password2) {
+                alert("Passwords do not match or are not at least eight characters long.");
+            } else {
+                alert("Passwords matched!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Sanketh's Profile</h1>
+    </header>
+    <main>
+        <section class="profile">
+            <h2>About Me</h2>
+            <h3>Student at University of Kansas</h3>
+            <h3>CS Student</h3>
+            <img src="your-photo.jpg" alt="Your Photo">
+            <p>Contact Info: sanketh@email.com</p>
+            <a href="your-website.html">Website</a>
+            <video controls>
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <p id="text-paragraph">Abcdefghijklmnopqrstuvwxyz</p>
+        <label for="color-input">Enter RGB color value:</label>
+        <input type="text" id="color-input">
+        <label for="border-width-input">Border Width:</label>
+        <input type="number" id="border-width-input" min="1">
+
+        <label for="password1">Enter Password:</label>
+        <input type="password" id="password1">
+        <br>
+        <label for="password2">Re-enter Password:</label>
+        <input type="password" id="password2">
+        <br>
+        <button onclick="verifyPasswords()">Verify Passwords</button>
+    </main>
+    <footer>
+        &copy; 2023 Sanketh
+    </footer>
+</body>
+</html>
